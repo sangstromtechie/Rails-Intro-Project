@@ -11,6 +11,7 @@
 
   10.times do
     monster = Monster.create(name: Faker::Witcher.monster, population: Faker::Number.between(50, 1000))
+    monster.locations << location
     location.monsters << monster
 
     school = location.schools.create(name: Faker::Witcher.school)
