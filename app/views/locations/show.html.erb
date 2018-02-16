@@ -32,16 +32,16 @@
 
 <p>
   <strong>School:</strong>
-<table>
-  <tbody>
-  <% @location.schools.each do |school| %>
-    <tr>
-      <td><%= school.name %></td>
-      <td><%= link_to 'Show', school %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+  <table>
+    <tbody>
+    <% @location.schools.each do |school| %>
+      <tr>
+        <td><%= school.name %></td>
+        <td><%= link_to 'Show', school %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |

@@ -13,14 +13,20 @@
 
 <p>
   <strong>Location:</strong>
-<table>
-  <tbody>
-    <tr>
-      <td><%= @school.location.name %></td>
-      <td><%= link_to 'Show', @school.location.name %></td>
-    </tr>
-  </tbody>
-</table>
+  <%= link_to @school.location.name, location_path(@school.location_id) %>
+</p>
+
+<p>
+  <strong>Witcher:</strong>
+  <table>
+    <tbody>
+    <% @school.witchers.each do |witcher| %>
+      <tr>
+        <td><%= link_to witcher.name, witcher %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </p>
 
 <%= link_to 'Edit', edit_school_path(@school) %> |

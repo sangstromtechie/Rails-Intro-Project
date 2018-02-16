@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Location.delete_all
+Monster.delete_all
+School.delete_all
+Witcher.delete_all
 
 10.times do
   location = Location.create(name: Faker::Witcher.unique.location, population: Faker::Number.between(100, 1500))
@@ -16,5 +19,5 @@ Location.delete_all
 
   school = location.schools.create(name: Faker::Witcher.school)
 
-  witcher = school.witchers.create(name: Faker::Witcher.witcher, age: Faker::Number.between(25, 60))
+  witcher = school.witchers.create(name: Faker::Witcher.unique.witcher, age: Faker::Number.between(25, 60))
 end
