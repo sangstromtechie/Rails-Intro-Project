@@ -16,5 +16,19 @@
   <%= @monster.population %>
 </p>
 
+<p>
+  <strong>Location:</strong>
+  <table>
+    <tbody>
+      <% @monster.locations.each do |habitat| %>
+        <tr>
+          <td><%= habitat.name %></td>
+          <td><%= link_to 'Show', habitat %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</p>
+
 <%= link_to 'Edit', edit_monster_path(@monster) %> |
 <%= link_to 'Back', monsters_path %>

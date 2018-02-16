@@ -6,24 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Location.destroy_all
-School.destroy_all
-Monster.destroy_all
-Witcher.destroy_all
+Location.delete_all
+School.delete_all
+Monster.delete_all
+Witcher.delete_all
 
 10.times do
   location = Location.create(name: Faker::Witcher.location, population: Faker::Number.between(100, 1500))
 
-  10.times do
-    monster = Monster.create(name: Faker::Witcher.monster, population: Faker::Number.between(50, 1000))
-    monster.locations << location
-    location.monsters << monster
+  monster = Monster.create(name: Faker::Witcher.monster, population: Faker::Number.between(50, 1000))
+  monster.locations << location
+  location.monsters << monster
 
-    school = location.schools.create(name: Faker::Witcher.school)
+  school = location.schools.create(name: Faker::Witcher.school)
 
-    10.times do
-      witcher = school.witchers.create(name: Faker::Witcher.witcher, age: Faker::Number.between(25, 60))
-    end
-
-  end
+  witcher = school.witchers.create(name: Faker::Witcher.witcher, age: Faker::Number.between(25, 60))
 end
