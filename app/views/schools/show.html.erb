@@ -1,4 +1,27 @@
-<p id="notice"><%= notice %></p>
+<tr>
+  <td><%=link_to 'About', root_path %></td>
+  <td><%=link_to 'Locations', controller: 'locations' %></td>
+  <td><%=link_to 'Monsters', controller: 'monsters' %></td>
+  <td><%=link_to 'Schools', controller: 'schools' %></td>
+  <td><%=link_to 'Witchers', controller: 'witchers' %></td>
+</tr>
+
+<p>
+  <strong>Name:</strong><br>
+  <%= @school.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+<table>
+  <tbody>
+    <tr>
+      <td><%= @school.location.name %></td>
+      <td><%= link_to 'Show', @school.location.name %></td>
+    </tr>
+  </tbody>
+</table>
+</p>
 
 <%= link_to 'Edit', edit_school_path(@school) %> |
 <%= link_to 'Back', schools_path %>
