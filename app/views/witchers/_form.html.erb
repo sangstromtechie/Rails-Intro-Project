@@ -11,7 +11,17 @@
     </div>
   <% end %>
 
-  <div class="actions">
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :age %><br>
+    <%= form.number_field :age %>
+  </p>
+
+  <p>
     <%= form.submit %>
-  </div>
+  </p>
 <% end %>
