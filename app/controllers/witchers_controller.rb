@@ -10,6 +10,7 @@ class WitchersController < ApplicationController
   # GET /witchers/1
   # GET /witchers/1.json
   def show
+    @witcher = Witcher.find(params[:id])
   end
 
   # GET /witchers/new

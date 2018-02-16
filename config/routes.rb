@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'welcome/about'
+
+  resources :locations
+  resources :monsters
+  resources :schools
+  resources :witchers
+
+  root 'welcome#about'
 end

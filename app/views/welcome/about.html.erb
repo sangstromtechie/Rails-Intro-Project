@@ -5,16 +5,8 @@
   <td><%=link_to 'Schools', controller: 'schools' %></td>
   <td><%=link_to 'Witchers', controller: 'witchers' %></td>
 </tr>
+<h1>About</h1>
+<p>Utilizing data from Faker::Witcher and Faker::Number, the following tables with be populated with data to represent
+  different locations and the population with in them.</p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @location.name %>
-</p>
-
-<p>
-  <strong>Population:</strong>
-  <%= @location.population %>
-</p>
-
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<%= image_tag "Rails_Intro_ERD.png" %>

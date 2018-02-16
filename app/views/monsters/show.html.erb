@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @monster.name %>
+</p>
+
+<p>
+  <strong>Population:</strong>
+  <%= @monster.population %>
+</p>
 
 <%= link_to 'Edit', edit_monster_path(@monster) %> |
 <%= link_to 'Back', monsters_path %>
