@@ -12,10 +12,10 @@ Monster.destroy_all
 Witcher.destroy_all
 
 10.times do
-  location = Location.create(name: Faker::Witcher.unique.location, population: Faker::Number.between(100, 1500))
+  location = Location.create(name: Faker::Witcher.location, population: Faker::Number.between(100, 1500))
 
   10.times do
-    monster = Monster.create(name: Faker::Witcher.unique.monster, population: Faker::Number.between(50, 1000))
+    monster = Monster.create(name: Faker::Witcher.monster, population: Faker::Number.between(50, 1000))
     monster.locations << location
     location.monsters << monster
 

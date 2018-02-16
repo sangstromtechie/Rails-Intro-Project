@@ -10,7 +10,7 @@ class MonstersController < ApplicationController
   # GET /monsters/1
   # GET /monsters/1.json
   def show
-    @monster = Monster.find(params[:id])
+    @monsters = Monster.find(params)
   end
 
   # GET /monsters/new
